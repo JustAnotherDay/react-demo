@@ -1,11 +1,11 @@
 import React from "react";
 
-function TodoItem() {
+function TodoItem(props) {
   return (
     <div className="list-group-item list-group-item-action">
       <label>
-        <input id="cb1" type="checkbox" />
-        &nbsp;Create a to-do listssssssssssssss
+        <input id="cb1" type="checkbox" checked={props.todoInfo.isDone}/>
+        &nbsp;{props.todoInfo.todo}
       </label>
     </div>
   );
